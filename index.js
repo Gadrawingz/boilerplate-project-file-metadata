@@ -1,9 +1,14 @@
-var express = require('express');
-var cors = require('cors');
+let express = require('express');
+let cors = require('cors');
 require('dotenv').config()
 
-var app = express();
+// PREPARING USAGE OF MULTER PACKAGE
+const multer = require('multer');
+const upload = multer();
 
+let app = express();
+
+// Getting started
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
